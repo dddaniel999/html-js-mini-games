@@ -1,0 +1,115 @@
+* {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #151515;
+  color: var(--clr-text);
+}
+
+.team-hero {
+  padding-top: 110px;
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(0.45turn, #373737, #a91d3a, #151515);
+}
+
+.persoane {
+  padding-top: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 200px;
+  border: none;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  box-shadow: 0px -1px 40px #151515, 0px 1px 5px;
+  overflow: hidden;
+}
+
+.persoana--0,
+.persoana--1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5% 10%;
+}
+
+.persoane img {
+  transition: all 0.3s ease;
+  border: 1px solid #a91d3a;
+  border-radius: 10px;
+}
+
+.blurred-icon {
+  width: fit-content;
+  position: relative;
+}
+
+.blurred-icon:hover img {
+  filter: blur(3px);
+  box-shadow: 0px 0px 50px #a91d3a;
+}
+
+.CV {
+  position: absolute;
+  display: none;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 20%;
+  font-weight: bolder;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: underline blue;
+  color: #fff;
+}
+
+.CV:hover {
+  font-size: 0.9rem;
+  padding: 9px 19px;
+  box-shadow: inset 0px 0px 5px #000;
+  text-shadow: 0px 0px 5px #000;
+}
+
+.blurred-icon:hover .CV {
+  display: block;
+}
+
+.persoane p {
+  margin: 20px 0;
+}
+.persoane a {
+  text-decoration: underline;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.persoane .nume {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+  .persoane {
+    flex-direction: column;
+    margin: 1%;
+    height: 220vh;
+  }
+
+  .persoana--1 {
+    transform: translateY(-300px);
+  }
+}

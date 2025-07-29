@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.outside--comments {
+  border-top: solid 4px #fff;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* background: linear-gradient(0.49turn, #151515, #a91d3a, #151515); */
+}
+
+.container-for--border {
+  overflow: hidden;
+  width: 91%;
+  margin-left: 10%;
+  border-left: 2px solid #fff;
+  /* border-top-left-radius: 10px; */
+  transition: all 0.3s ease;
+  background: linear-gradient(0.49turn, #151515 30%, #a91d3a, #151515 90%);
+}
+
+.container-for--border:hover {
+  margin-left: 9%;
+  border-left: 5px solid #a91d3a;
+}
+
+.container {
+  border-radius: 20px;
+  background: #fff;
+  padding: 20px;
+  font-family: monospace;
+  width: 500px;
+  box-shadow: 0px 0px 50px #000;
+  margin: 40px 5%;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  scale: 1.01;
+  margin-top: 40px;
+  box-shadow: 0px 0px 50px #a91d3a;
+}
+
+.head {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.nota10-text {
+  margin: 10px 0px;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.commentbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.user {
+  width: 35%;
+  border: none;
+  outline: none;
+  margin: 5px 0;
+  color: gray;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.commentbox > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  margin-right: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content {
+  width: 100%;
+}
+
+.commentinput > input {
+  border: none;
+  padding: 10px;
+  padding-left: 0;
+  outline: none;
+  border-bottom: 2px solid blue;
+  margin-bottom: 10px;
+  width: 95%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+}
+
+.buttons button {
+  padding: 5px 10px;
+  background-color: lightgrey;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.buttons button.abled {
+  background-color: blue;
+  color: #fff;
+}
+
+.policy {
+  margin: 20px 0;
+  font-size: 0.8em;
+  font-family: Arial, sans-serif;
+  color: #808080;
+}
+
+.policy a {
+  text-decoration: none;
+  color: blue;
+}
+
+.notify {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.notify > input {
+  margin-right: 5px;
+}
+
+.parents {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  /* border: solid 2px #a91d3a; */
+  box-shadow: 10px 10px 30px #000;
+}
+
+.parents h1 {
+  font-size: 0.9em;
+}
+
+.parents p {
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+
+.parents > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.engagements {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.engagements img {
+  width: 20px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.engagements img:nth-child(1) {
+  margin-right: 10px;
+  width: 25px;
+}
+.engagements img:hover {
+  scale: 0.9;
+  cursor: pointer;
+}
+
+.date {
+  color: gray;
+  font-size: 0.7em;
+}
+
+.delete-btn {
+  margin: 0px 20px;
+  margin-left: 260px;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}

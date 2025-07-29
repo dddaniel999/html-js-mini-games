@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/footer/footer.css" />
+    <link rel="stylesheet" href="/navbar/navbar-style.css" />
+    <link rel="stylesheet" href="/comments_section/comments-style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="navbar">
+        <div class="icon">
+          <a href="/#home"><img src="/icon.png" alt="icon" id="icon-img" /></a>
+          <h2 id="icon-text"><a href="/#home">G4.me</a></h2>
+        </div>
+        <div class="search">
+          <input type="text" name="" id="" placeholder="Search...⌕" />
+        </div>
+        <div class="nav-list--container">
+          <ul class="nav-list">
+            <li id="nav-home"><a href="/#home">Home</a></li>
+            <li id="nav-about"><a href="/#about">About</a></li>
+            <li id="nav-services"><a href="/#services">Featured</a></li>
+
+            <li id="nav-games">
+              <a href="#games">Games <span id="nav-games--arrow"> > </span></a>
+            </li>
+
+            <li id="nav-blog">
+              <a href="/blog/index.html">Blog</a>
+            </li>
+            <li id="nav-team">
+              <a href="/team/index.html" id="team" target="_blank">Team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="games-dropdown hidden">
+          <ul>
+            <li><a href="/games/dice_game/" target="_blank">Dice Game</a></li>
+            <li>
+              <a href="/games/guess_the_number/" target="_blank">
+                Guessing Game
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="contents">
+      <!-- SLIDER -->
+      <div class="slider-all">
+        <h2 id="slider-header">LATEST POSTS</h2>
+        <div class="slider-container">
+          <button class="slider-btns" id="slider-prev"><</button>
+          <div class="slide slide--1">
+            <h1>Coming Soon...</h1>
+            <h2><span id="pac">PAC</span> - <span id="man"> MAN </span>!</h2>
+            <a href="posts/post4/post4.html" class="read-more">Read more</a>
+          </div>
+          <div class="slide slide--2">
+            <h1>New game!</h1>
+            <h2>Guess The Number!</h2>
+            <a href="posts/post3/post3.html" class="read-more">Read more</a>
+          </div>
+          <div class="slide slide--3">
+            <h1>New game!</h1>
+            <h2>Roll The Dice!</h2>
+            <h3>
+              <span class="emoji">🔥🔥</span>Local 2-Player<span class="emoji"
+                >🔥🔥</span
+              >
+            </h3>
+            <a href="posts/post2/post2.html" class="read-more">Read more</a>
+          </div>
+          <button class="slider-btns" id="slider-next">></button>
+          <div class="dots"></div>
+        </div>
+      </div>
+      <div class="blog-archive">
+        <h2>Blog Archive</h2>
+        <ul id="blog-archive--list">
+          <li><a href="posts/post4/post4.html">COMING SOON..</a></li>
+          <li>
+            <a href="posts/post3/post3.html">New game: Guess The Number</a>
+          </li>
+          <li><a href="posts/post2/post2.html">New game: Roll The Dice</a></li>
+          <li><a href="posts/post1/post1.html">FIRST POST: Welcome!</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- COMMENTS SECTION -->
+    <div class="outside--comments">
+      <div class="container-for--border">
+        <div class="container">
+          <div class="head">
+            <h1>Post a Comment!</h1>
+          </div>
+          <div><span id="comment">0</span> Comments</div>
+          <div class="nota10-text">
+            <p>nota 10??? pls</p>
+          </div>
+          <div class="comments"></div>
+          <div class="commentbox">
+            <img src="/comments_section/unknown.png" alt="" />
+            <h2>Comment as:</h2>
+            <input type="text" value="Anonymous" class="user" />
+
+            <div class="commentinput">
+              <input
+                type="text"
+                placeholder="Enter comment"
+                class="usercomment"
+              />
+              <div class="buttons">
+                <button type="submit" disabled id="publish">Publish</button>
+                <div class="notify">
+                  <input type="checkbox" class="notifyinput" /><span
+                    >Notify me</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="policy">
+              This site is protected by reCAPTCHA and the Google
+              <a href="">privacy policy</a> and Terms and Conditions
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+
+    <footer>
+      <div class="page-footer"></div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          fetch("../footer/footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+              const footerElement = document.querySelector(".page-footer");
+              // console.log(footerElement);
+              if (footerElement) {
+                footerElement.innerHTML = data;
+                // console.log(data);
+              } else {
+                console.error("FOOTER ELEM NOT FOUND");
+              }
+            });
+        });
+      </script>
+    </footer>
+  </body>
+
+  <script src="script.js"></script>
+  <script src="/navbar/navbar.js" defer></script>
+  <script src="/comments_section/script.js"></script>
+</html>

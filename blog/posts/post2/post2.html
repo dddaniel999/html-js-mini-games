@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../posts-general-style.css" />
+    <link rel="stylesheet" href="../../../navbar/navbar-style.css" />
+    <link rel="stylesheet" href="/footer/footer.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Post2</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="navbar">
+        <div class="icon">
+          <a href="/#home"><img src="/icon.png" alt="icon" id="icon-img" /></a>
+          <h2 id="icon-text"><a href="/#home">G4.me</a></h2>
+        </div>
+        <div class="search">
+          <input type="text" name="" id="" placeholder="Search...⌕" />
+        </div>
+        <div class="nav-list--container">
+          <ul class="nav-list">
+            <li id="nav-home"><a href="/#home">Home</a></li>
+            <li id="nav-about"><a href="/#about">About</a></li>
+            <li id="nav-services"><a href="/#services">Featured</a></li>
+
+            <li id="nav-games">
+              <a href="#games">Games <span id="nav-games--arrow"> > </span></a>
+            </li>
+
+            <li id="nav-blog">
+              <a href="/blog/index.html">Blog</a>
+            </li>
+            <li id="nav-team">
+              <a href="/team/index.html" id="team" target="_blank">Team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="games-dropdown hidden">
+          <ul>
+            <li><a href="/games/dice_game/" target="_blank">Dice Game</a></li>
+            <li>
+              <a href="/games/guess_the_number/" target="_blank">
+                Guessing Game
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="contents">
+      <div id="featured--photo">
+        <img src="/blog/posts/featured_images/post2.jpg" alt="" />
+      </div>
+      <div class="title-and-date">
+        <h1>FIRST POST: Welcome to G4.me!</h1>
+        <p id="date">10/07/2024</p>
+      </div>
+      <div class="article">
+        <h2>NEW GAME: Roll The Dice!</h2>
+        <p>
+          We are delighted to unveil our latest addition to the gaming universe:
+          "Roll The Dice!". Here’s everything you need to know about this new
+          game.
+        </p>
+
+        <h2>Game Description</h2>
+        <p>
+          "Roll The Dice!" is a simple yet engaging 1v1 local dice game where
+          the goal is to be the first player to reach a score of 100. Players
+          take turns rolling a die and can choose to either hold or roll again.
+          If a player rolls a 1, their turn ends, and no points are added to
+          their score. If they choose to hold, the sum of their consecutive
+          rolls is added to their total score.
+        </p>
+
+        <h2>How to Play</h2>
+        <ul>
+          <li>On your turn, press the roll button to roll the die.</li>
+          <li>
+            If you roll a number between 2 and 6, you can choose to either roll
+            again or hold.
+          </li>
+          <li>
+            If you roll a 1, your turn ends, and no points are added to your
+            score.
+          </li>
+          <li>
+            If you hold, the sum of your consecutive rolls is added to your
+            score.
+          </li>
+          <li>The first player to reach a score of 100 wins the game.</li>
+        </ul>
+
+        <h2>Features</h2>
+        <ul>
+          <li>
+            <strong>Simple Gameplay:</strong> Easy-to-understand rules make
+            "Roll The Dice!" accessible to everyone.
+          </li>
+          <li>
+            <strong>Strategic and Exciting:</strong> Decide when to risk another
+            roll or play it safe and hold.
+          </li>
+          <li>
+            <strong>1v1 Local Mode:</strong> Enjoy the game with a friend for
+            some head-to-head competition.
+          </li>
+          <li>
+            <strong>Endless Fun:</strong> Each game presents a new challenge and
+            the thrill of never knowing what the next roll will bring.
+          </li>
+        </ul>
+
+        <h2>Why You’ll Love It</h2>
+        <p>
+          "Roll The Dice!" exemplifies our dedication to creating simple yet
+          exhilarating games. It’s a game that anyone can pick up and enjoy!
+        </p>
+
+        <h2>Join the Fun</h2>
+        <p>
+          Ready to test your dice-rolling skills? Start playing "Roll The Dice!"
+          today. Challenge your friends and see who can reach 100 points first.
+          Remember, every great gaming experience starts with a simple idea, and
+          "Roll The Dice!" is here to prove that simplicity can be incredibly
+          fun.
+        </p>
+        <hr />
+        <p id="endnote-after-hr">
+          We can't wait to see who will reach 100 points first. Happy rolling!
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div class="page-footer"></div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          fetch("../../../footer/footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+              const footerElement = document.querySelector(".page-footer");
+              // console.log(footerElement);
+              if (footerElement) {
+                footerElement.innerHTML = data;
+                // console.log(data);
+              } else {
+                console.error("FOOTER ELEM NOT FOUND");
+              }
+            });
+        });
+      </script>
+    </footer>
+  </body>
+  <script src="/blog/posts/posts-script.js"></script>
+  <script src="/navbar/navbar.js" defer></script>
+</html>

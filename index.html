@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="footer/footer.css" />
+    <link rel="stylesheet" href="navbar/navbar-style.css" />
+
+    <link rel="icon" href="/icon.png" />
+    <!-- <link rel="stylesheet" href="/navbar/navbar-style.css" /> -->
+  </head>
+  <body>
+    <!-- <div class="navbarr"></div> -->
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("/navbar/navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            const navbarElement = document.querySelector(".navbarr");
+            // console.log(navbarElement);
+            if (navbarElement) {
+              navbarElement.innerHTML = data;
+              // console.log(data);
+            } else {
+              console.error("NAVBAR ELEM NOT FOUND");
+            }
+          });
+      });
+    </script> -->
+
+    <!-- Navigation Bar -->
+    <header>
+      <div class="navbar">
+        <div class="icon">
+          <a href="#home"><img src="icon.png" alt="icon" id="icon-img" /></a>
+          <h2 id="icon-text"><a href="#home">G4.me</a></h2>
+        </div>
+        <div class="search">
+          <input type="text" name="" id="" placeholder="Search...⌕" />
+        </div>
+        <div class="nav-list--container">
+          <ul class="nav-list">
+            <li id="nav-home"><a href="#home">Home</a></li>
+            <li id="nav-about"><a href="#about">About</a></li>
+            <li id="nav-services"><a href="#services">Featured</a></li>
+
+            <li id="nav-games">
+              <a href="#games">Games <span id="nav-games--arrow"> > </span></a>
+            </li>
+
+            <li id="nav-blog">
+              <a href="/blog/index.html" target="_blank">Blog</a>
+            </li>
+            <li id="nav-team">
+              <a href="/team/index.html" id="team" target="_blank">Team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="games-dropdown hidden">
+          <ul>
+            <li><a href="/games/dice_game/" target="_blank">Dice Game</a></li>
+            <li>
+              <a href="/games/guess_the_number/" target="_blank">
+                Guessing Game
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="hero-container">
+        <h1>Game, g4me...G4.me!</h1>
+        <h2>Exploring the antidote to boredom!</h2>
+        <p>Have fun! Guide us..</p>
+        <p>Maybe join us?</p>
+        <button id="Learn-more">Learn more</button>
+      </div>
+    </div>
+    <!-- banner between pages -->
+    <div class="meteor-rain">
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+      <img src="dice.gif" class="img-fluid rounded-top" alt="" />
+    </div>
+
+    <!-- About -->
+    <div class="about">
+      <div class="about--top">
+        <div class="goal">
+          <h2>Our goal!</h2>
+          <p>
+            Our objective is to develop a community centered around "simplish"
+            games, which are easy to understand and play but still incredibly
+            fun and engaging!
+          </p>
+        </div>
+        <div class="visit-blog">
+          <h2>WHAT ARE YOU WAITING FOR?</h2>
+          <p><span>VISIT OUR BLOG!</span></p>
+          <button id="btn--blog">CLICK!!!</button>
+        </div>
+      </div>
+      <div class="contact-form--all">
+        <h2 id="contact-form--header">
+          Questions? Ideas? <span>Feel free to contact us!</span>
+        </h2>
+
+        <form action="" class="contact-form">
+          <div class="name">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" />
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" />
+          </div>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" />
+          <label for="form-message">Message:</label>
+          <input type="text" name="form-message" id="form-message" />
+          <button type="submit" id="submit--btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- banner between pages -->
+    <div class="meteor-rain">
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+      <img src="casino.gif" class="img-fluid rounded-top" alt="" />
+    </div>
+
+    <!-- Products-Services -->
+    <div class="services">
+      <div id="featured--heading"><h2>Featured</h2></div>
+      <div class="service1">
+        <h2>GUESSING GAME!</h2>
+        <p>?</p>
+      </div>
+      <div class="service2">
+        <h2>DICE GAME!</h2>
+        <div id="image--row">
+          <img src="dice-6.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="page-footer"></div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          fetch("footer/footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+              const footerElement = document.querySelector(".page-footer");
+              // console.log(footerElement);
+              if (footerElement) {
+                footerElement.innerHTML = data;
+                // console.log(data);
+              } else {
+                console.error("FOOTER ELEM NOT FOUND");
+              }
+            });
+        });
+      </script>
+    </footer>
+  </body>
+  <script type="module" src="script.js"></script>
+  <script src="/navbar/navbar.js" defer></script>
+</html>

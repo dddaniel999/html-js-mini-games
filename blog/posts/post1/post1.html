@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../posts-general-style.css" />
+    <link rel="stylesheet" href="../../../navbar/navbar-style.css">
+    <link rel="stylesheet" href="/footer/footer.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Post1</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="navbar">
+        <div class="icon">
+          <a href="/#home"
+            ><img src="/icon.png" alt="icon" id="icon-img"
+          /></a>
+          <h2 id="icon-text"><a href="/#home">G4.me</a></h2>
+        </div>
+        <div class="search">
+          <input type="text" name="" id="" placeholder="Search...⌕" />
+        </div>
+        <div class="nav-list--container">
+          <ul class="nav-list">
+            <li id="nav-home"><a href="/#home">Home</a></li>
+            <li id="nav-about"><a href="/#about">About</a></li>
+            <li id="nav-services"><a href="/#services">Featured</a></li>
+
+            <li id="nav-games">
+              <a href="#games">Games <span id="nav-games--arrow"> > </span></a>
+            </li>
+
+            <li id="nav-blog">
+              <a href="/blog/index.html">Blog</a>
+            </li>
+            <li id="nav-team">
+              <a href="/team/index.html" id="team" target="_blank">Team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="games-dropdown hidden">
+          <ul>
+            <li><a href="/games/dice_game/" target="_blank">Dice Game</a></li>
+            <li>
+              <a href="/games/guess_the_number/" target="_blank">
+                Guessing Game
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="contents">
+      <div id="featured--photo">
+        <img src="/blog/posts/featured_images/post1.jpg" alt="" />
+      </div>
+      <div class="title-and-date">
+        <h1>FIRST POST: Welcome to G4.me!</h1>
+        <p id="date">10/07/2024</p>
+      </div>
+      <div class="article">
+        <h2>Our Mission: </h2>
+        <p>Make Simple but Exciting Games Welcome, gamers and developers, to our brand-new community!</p>
+          <p>Whether you are a seasoned developer, a casual gamer, or someone who is just starting to explore
+          the world of game development, you have found the perfect place to
+          unleash your creativity and share your passion for gaming. </p>
+          <h2>Who We Are</h2>
+          <p>We are a community dedicated to the art and science of creating simple
+          yet thrilling games. Our mission is to foster an environment where
+          innovation meets accessibility, ensuring that anyone with a love for
+          games can create and share their unique experiences. Why Simple Games?
+          In the ever-evolving landscape of gaming, it's easy to get lost in the
+          allure of complex mechanics and stunning graphics. However, some of
+          the most memorable and impactful games are those that embrace
+          simplicity. Games like "Tetris," "Flappy Bird," and "Among Us" prove
+          that you don't need an intricate storyline or cutting-edge graphics to
+          create a hit. Simple games have a unique charm and accessibility that
+          make them appealing to a broad audience. They are easy to pick up and
+          play, but often hard to master, providing endless hours of fun and
+          challenge.</p> 
+          <h2>Our Goals </h2>
+          <ul>
+          <li> Empower Creators: We believe everyone has a
+          game inside them waiting to be made. Whether you're a programmer,
+          artist, writer, or just someone with a great idea, we want to help you
+          bring your vision to life.</li>
+          <br>
+           <li> Foster Collaboration: Game development
+          is a collaborative effort. By connecting creators from various
+          backgrounds, we aim to foster partnerships that lead to innovative and
+          exciting games.</li>
+          <br>
+           <li> Share Knowledge: From tutorials and resources to
+          forums and live Q&A sessions, we are committed to providing the tools
+          and knowledge necessary to help you succeed in game development.</li>
+          <br> 
+          <li>
+          Celebrate Simplicity: We celebrate the art of making games that are
+          easy to understand but difficult to master. Our focus is on gameplay,
+          creativity, and fun.</li> 
+
+          <h2>Join the Community</h2>
+          <p> Becoming a part of our community is simple. Engage with us through our forums, share your
+          projects, seek feedback, and participate in our events. Whether you're
+          looking to learn, teach, or simply play, there's a place for you here.</p>
+          
+          <h2>Let's Get Started</h2>
+          <p> Your journey in game development starts now. Dive
+          into our resources, join our discussions, and start creating.
+          Remember, every gaming masterpiece begins with a simple idea.
+          Together, let's make games that are not only simple but truly
+          exciting. Welcome to the community. Let's make something great!</p>
+          <hr>
+          <p id="endnote-after-hr">Thank you for being part of this exciting journey. We can’t wait to see the
+          amazing games you will create.</p>
+        </div>
+      </div>
+    </div>
+
+     <!-- FOOTER -->
+
+     <footer>
+      <div class="page-footer"></div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          fetch("../../../footer/footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+              const footerElement = document.querySelector(".page-footer");
+              // console.log(footerElement);
+              if (footerElement) {
+                footerElement.innerHTML = data;
+                // console.log(data);
+              } else {
+                console.error("FOOTER ELEM NOT FOUND");
+              }
+            });
+        });
+      </script>
+    </footer>
+  </body>
+  <script src="/blog/posts/posts-script.js"></script>
+  <script src="/navbar/navbar.js" defer></script>
+</html>

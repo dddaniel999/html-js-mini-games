@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/navbar/navbar-style.css" />
+    <link rel="stylesheet" href="team-style.css" />
+    <link rel="stylesheet" href="/footer/footer.css" />
+    <title>TEAM</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="navbar">
+        <div class="icon">
+          <a href="/#home"><img src="/icon.png" alt="icon" id="icon-img" /></a>
+          <h2 id="icon-text"><a href="/#home">G4.me</a></h2>
+        </div>
+        <div class="search">
+          <input type="text" name="" id="" placeholder="Search...⌕" />
+        </div>
+        <div class="nav-list--container">
+          <ul class="nav-list">
+            <li id="nav-home"><a href="/#home">Home</a></li>
+            <li id="nav-about"><a href="/#about">About</a></li>
+            <li id="nav-services"><a href="/#services">Featured</a></li>
+
+            <li id="nav-games">
+              <a href="#games">Games <span id="nav-games--arrow"> > </span></a>
+            </li>
+
+            <li id="nav-blog">
+              <a href="/blog/index.html" target="_blank">Blog</a>
+            </li>
+            <li id="nav-team">
+              <a href="/team/index.html" id="team" target="_blank">Team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="games-dropdown hidden">
+          <ul>
+            <li><a href="/games/dice_game/" target="_blank">Dice Game</a></li>
+            <li>
+              <a href="/games/guess_the_number/" target="_blank">
+                Guessing Game
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="team-hero">
+        <div class="persoane">
+          <div class="persoana--0">
+            <h2>Web Designer</h2>
+            <p id="p-daniel">
+              Focusing on the visual appearance of the website, including
+              graphic design, interface, and user experience, he utilizes
+              artistic skills and technical knowledge to provide an appealing
+              aesthetic and intuitive navigation, contributing to the creation
+              of an attractive and effective online presence.
+            </p>
+            <div class="blurred-icon">
+              <button class="CV" id="cv-daniel">C.V.</button>
+              <img src="/team/daniel.webp" alt="" srcset="" />
+            </div>
+            <h2 class="nume">Coman Daniel-Mihai</h2>
+          </div>
+          <div class="persoana--1">
+            <h2 class="nume">Gheban Stefan-Madalin</h2>
+            <div class="blurred-icon">
+              <button class="CV" id="cv-stefan">C.V.</button>
+              <img src="/team/stefan.webp" alt="" srcset="" />
+            </div>
+            <h2>Web Designer, Content Manager</h2>
+            <p id="p-stefan">
+              Coordinates, develops, and manages the company's website content,
+              ensuring quality and relevance to support strategic objectives.
+              Additionally, participates in creating an engaging digital
+              aesthetic for the site, highlighting visual identity and user
+              experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="page-footer"></div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          fetch("/footer/footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+              const footerElement = document.querySelector(".page-footer");
+              // console.log(footerElement);
+              if (footerElement) {
+                footerElement.innerHTML = data;
+                // console.log(data);
+              } else {
+                console.error("FOOTER ELEM NOT FOUND");
+              }
+            });
+        });
+      </script>
+    </footer>
+  </body>
+  <script src="team.js"></script>
+  <script src="/navbar/navbar.js"></script>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../posts-general-style.css" />
+    <link rel="stylesheet" href="../../../navbar/navbar-style.css">
+    <link rel="stylesheet" href="/footer/footer.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Post4</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="navbar">
+        <div class="icon">
+          <a href="/#home"
+            ><img src="/icon.png" alt="icon" id="icon-img"
+          /></a>
+          <h2 id="icon-text"><a href="/#home">G4.me</a></h2>
+        </div>
+        <div class="search">
+          <input type="text" name="" id="" placeholder="Search...⌕" />
+        </div>
+        <div class="nav-list--container">
+          <ul class="nav-list">
+            <li id="nav-home"><a href="/#home">Home</a></li>
+            <li id="nav-about"><a href="/#about">About</a></li>
+            <li id="nav-services"><a href="/#services">Featured</a></li>
+
+            <li id="nav-games">
+              <a href="#games">Games <span id="nav-games--arrow"> > </span></a>
+            </li>
+
+            <li id="nav-blog">
+              <a href="/blog/index.html">Blog</a>
+            </li>
+            <li id="nav-team">
+              <a href="/team/index.html" id="team" target="_blank">Team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="games-dropdown hidden">
+          <ul>
+            <li><a href="/games/dice_game/" target="_blank">Dice Game</a></li>
+            <li>
+              <a href="/games/guess_the_number/" target="_blank">
+                Guessing Game
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="contents">
+      <div id="featured--photo">
+        <img src="/blog/posts/featured_images/post4.jpg" alt="" />
+      </div>
+      <div class="title-and-date">
+        <h1>Coming Soon..</h1><br>
+        <h1 id="pacman-all"><span id="pac">PAC</span> -<span id="man"> MAN </span> ! </h1>
+        <p id="date">10/07/2024</p>
+      </div>
+      <div class="article">
+        <h2>Pac-Man: The Return of the Classic Arcade Game</h2>
+        <p>Get ready for the return of one of the most iconic arcade games of all time: Pac-Man! This classic game, first released in 1980, has been a favorite for generations, captivating players with its simple yet addictive gameplay. Now, Pac-Man is making a comeback, bringing the same fun and excitement to a new generation of gamers.</p>
+    
+        <h2>What to Expect</h2>
+        <p>In this new release, players can look forward to all the classic elements that made Pac-Man a hit: navigating the maze, eating dots, and avoiding the colorful ghosts. But that's not all – the game will also feature new levels, power-ups, and challenges to keep even the most experienced players on their toes.</p>
+    
+        <h2>New Features</h2>
+        <p>The upcoming version of Pac-Man will include:</p>
+        <ul>
+            <li><strong>Enhanced Graphics:</strong> Enjoy a visually stunning experience with updated graphics that bring the classic game to life.</li>
+            <li><strong>Multiplayer Mode:</strong> Challenge your friends and see who can achieve the highest score in the new multiplayer mode.</li>
+            <li><strong>Special Power-Ups:</strong> Discover new power-ups that give Pac-Man special abilities, adding a new layer of strategy to the game.</li>
+        </ul>
+    
+        <h2>Stay Tuned</h2>
+        <p>Keep an eye out for more updates on the release date and exclusive previews. Whether you're a long-time fan or new to the world of Pac-Man, this upcoming release is sure to provide hours of entertainment. Get ready to relive the nostalgia and experience Pac-Man like never before!</p>
+    <hr>
+        <p id="endnote-after-hr">Don't miss out – Pac-Man is coming soon on this website, easy to access!</p>
+        </div>
+      </div>
+    </div>
+
+     <!-- FOOTER -->
+
+     <footer>
+      <div class="page-footer"></div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          fetch("../../../footer/footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+              const footerElement = document.querySelector(".page-footer");
+              // console.log(footerElement);
+              if (footerElement) {
+                footerElement.innerHTML = data;
+                // console.log(data);
+              } else {
+                console.error("FOOTER ELEM NOT FOUND");
+              }
+            });
+        });
+      </script>
+    </footer>
+  </body>
+  <script src="/blog/posts/posts-script.js"></script>
+  <script src="/navbar/navbar.js" defer></script>
+</html>

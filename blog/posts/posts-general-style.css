@@ -1,0 +1,137 @@
+:root {
+  --clr-blackish: #151515;
+  --clr-text: #eeeeee;
+  --clr-wine: #a91d3a;
+  --clr-pinkish: #c73659;
+}
+
+* {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    to left,
+    var(--clr-blackish) 35%,
+    var(--clr-wine)
+  );
+}
+
+.contents {
+  padding-top: 110px;
+  margin-right: 7%;
+  border-right: #000 solid 4em;
+  border-radius: 70%;
+  box-shadow: 3rem 0rem 700px #a91d3a, -3rem 0rem 700px #000;
+}
+
+#featured--photo {
+  /* scale: 1; */
+  padding-top: 110px;
+  /* width: 100vw; */
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease;
+}
+
+#featured--photo img {
+  margin-left: 15%;
+  margin-top: 3rem;
+  width: 100%;
+  display: block;
+  width: 1000px;
+  height: 600px;
+  box-shadow: 0px 0px 100px var(--clr-wine);
+  border: solid 5px var(--clr-wine);
+}
+
+.blurred {
+  transform: scale(0.99);
+  filter: blur(10px);
+  opacity: 0.7;
+}
+
+/* ARTICLEEEE */
+
+.title-and-date {
+  width: 1000px;
+  margin-left: 15%;
+  text-align: right;
+  margin-top: 1%;
+  transition: all 0.4s ease;
+}
+
+h1 {
+  margin-left: 15%;
+  text-align: right;
+  font-size: 4rem;
+  color: #a91d3a;
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #fff,
+    0.5px 0.5px 0 #fff, 15px 0px 20px #151515;
+}
+
+#date {
+  padding: 20px;
+  text-align: right;
+  color: gray;
+  font-size: 1.5rem;
+}
+
+.article {
+  color: var(--clr-text);
+  position: relative;
+  background-color: rgba(255, 0, 0, 0.1);
+  padding: 1rem;
+  margin-left: 10%;
+  width: 55rem;
+  text-indent: 5%;
+  font-size: 1.5rem;
+  border-left: solid 3px var(--clr-wine);
+  height: fit-content;
+  box-shadow: 30px 0px 50px #151515;
+  border-radius: 20px;
+  margin-bottom: 7rem;
+  transition: all 0.4s ease;
+}
+
+.article p {
+  padding: 1rem 3rem;
+}
+
+.article h2 {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.article ul {
+  list-style: decimal;
+  text-indent: 3%;
+  padding: 2rem 3rem;
+}
+
+hr {
+  margin-top: 4rem;
+  width: 80%;
+}
+
+#endnote-after-hr {
+  padding: 2rem 0;
+}
+
+/* EXCLUSIVE POST4 */
+#pacman-all {
+  color: cyan;
+  text-shadow: 0px 0px 20px cyan;
+}
+
+#pac {
+  color: yellow;
+  text-shadow: 0px 0px 20px yellow;
+}
+
+#man {
+  color: red;
+  text-shadow: 0px 0px 20px red;
+}

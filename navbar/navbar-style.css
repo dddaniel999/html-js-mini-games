@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+:root {
+  --clr-blackish: #151515;
+  --clr-text: #eeeeee;
+  --clr-wine: #a91d3a;
+  --clr-pinkish: #c73659;
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+  /* margin-top: 0; */
+  font-family: "Oswald", sans-serif;
+  z-index: 1000;
+  height: 110px;
+
+  background: transparent;
+  position: fixed;
+  width: 97vw;
+  margin-left: 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  color: var(--clr-text);
+  padding: 10px 20px;
+  margin-right: 2px;
+  font-size: 30px;
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-left: #fff 3px;
+  border-bottom: #fff 3px;
+  transition: 0.3s ease;
+}
+
+.navbar:hover {
+  box-shadow: 0px 0px 100px #a91d3a;
+  background-image: linear-gradient(
+    to left,
+    var(--clr-blackish) 35%,
+    var(--clr-wine)
+  );
+}
+
+.with-transition {
+  transition: 0.2s ease;
+}
+
+.search {
+  /* display: none; */
+  position: absolute;
+  margin: 0 12%;
+  padding-right: 10%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.search input {
+  /* display: none; */
+  border: 2px solid #000;
+  outline: none;
+  padding: 20px;
+  border-radius: 40px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+  font-size: 30px;
+  width: 400px;
+  height: 40%;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.search input:hover {
+  box-shadow: 0px 0px 50px #000;
+}
+
+.nav-list--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-list {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  margin-right: 20px;
+  border-radius: 20px;
+  transition: text-shadow 0.1s ease;
+}
+
+.nav-list a {
+  font-weight: lighter;
+  color: var(--clr-text);
+  text-decoration: none;
+  padding: 50px 20px;
+  transition: all 0.25s ease;
+}
+
+.nav-list a:hover {
+  font-weight: bold;
+  color: var(--clr-wine);
+  text-decoration: underline 4px;
+  text-underline-offset: 40px;
+  margin: auto 5px;
+}
+
+.icon {
+  border-radius: 70px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon:hover {
+  background-color: #fff;
+  transition: 0.3s ease;
+  margin-left: 10px;
+  border-radius: 20px;
+
+  #icon-text {
+    font-size: 22px;
+    text-shadow: 0.5px 0.5px 1px #5b1927, 1px 1px 1px #a91d3a,
+      1.5px 1.5px 1px #c73659, 2px 2px 1px pink, 2.5px 2.5px 1px #151515,
+      -0.5px -0.5px 1px cyan, -1px -1px 1px gold, -1.5px -1.5px 1px forestgreen,
+      -2px -2px 1px red, -2.5px -2.5px 1px #151515;
+  }
+  a {
+    color: var(--clr-text);
+    font-size: 22px;
+  }
+}
+
+.icon a {
+  text-decoration: none;
+  color: #151515;
+  transition: all 0.3s ease;
+}
+
+#icon-img {
+  width: 45px;
+  height: 45px;
+  rotate: 20deg;
+  /* border-radius: 30%; */
+  /* border: solid red 1px; */
+  align-items: center;
+  margin-left: 1rem;
+  padding-bottom: 0px;
+}
+
+#icon-text {
+  font-size: 23px;
+}
+
+#nav-games {
+  white-space: nowrap; /* WTF? */
+}
+
+#nav-games--arrow {
+  display: inline-block;
+  transition: all 0.1s ease;
+}
+
+.games-dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  margin-left: 80%;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  z-index: -1;
+  color: var(--clr-text);
+  font-size: 22px;
+  padding: 10px 10px;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.games-dropdown:hover {
+  box-shadow: 0px 0px 100px #a91d3a;
+  border-color: #a91d3a;
+}
+
+.games-dropdown li {
+  list-style-type: none;
+}
+
+.games-dropdown a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.games-dropdown a:hover {
+  color: var(--clr-wine);
+  text-shadow: 0px 0px 10px var(--clr-wine);
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.highlight-nav--element {
+  font-weight: 700;
+  background: rgba(143, 59, 59, 0.1);
+  border-top: 2px solid var(--clr-wine);
+}
+
+@media screen and (max-width: 1250px) {
+  .search input {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .icon {
+    display: none;
+  }
+}

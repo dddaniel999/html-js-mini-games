@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../posts-general-style.css" />
+    <link rel="stylesheet" href="../../../navbar/navbar-style.css" />
+    <link rel="stylesheet" href="/footer/footer.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Post3</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="navbar">
+        <div class="icon">
+          <a href="/#home"><img src="/icon.png" alt="icon" id="icon-img" /></a>
+          <h2 id="icon-text"><a href="/#home">G4.me</a></h2>
+        </div>
+        <div class="search">
+          <input type="text" name="" id="" placeholder="Search...⌕" />
+        </div>
+        <div class="nav-list--container">
+          <ul class="nav-list">
+            <li id="nav-home"><a href="/#home">Home</a></li>
+            <li id="nav-about"><a href="/#about">About</a></li>
+            <li id="nav-services"><a href="/#services">Featured</a></li>
+
+            <li id="nav-games">
+              <a href="#games">Games <span id="nav-games--arrow"> > </span></a>
+            </li>
+
+            <li id="nav-blog">
+              <a href="/blog/index.html">Blog</a>
+            </li>
+            <li id="nav-team">
+              <a href="/team/index.html" id="team" target="_blank">Team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="games-dropdown hidden">
+          <ul>
+            <li><a href="/games/dice_game/" target="_blank">Dice Game</a></li>
+            <li>
+              <a href="/games/guess_the_number/" target="_blank">
+                Guessing Game
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="contents">
+      <div id="featured--photo">
+        <img src="/blog/posts/featured_images/post3.jpg" alt="" />
+      </div>
+      <div class="title-and-date">
+        <h1>NEW GAME: Guess The Number!</h1>
+        <p id="date">10/07/2024</p>
+      </div>
+      <div class="article">
+        <h2>NEW GAME: Guess The Number!</h2>
+        <p>
+          We are thrilled to introduce our latest addition to the gaming world:
+          "Guess The Number!" This game is designed to be a perfect blend of
+          simplicity and excitement, making it ideal for players of all ages and
+          skill levels. Here's everything you need to know about this engaging
+          new game.
+        </p>
+
+        <h2>Game Description</h2>
+        <p>
+          "Guess The Number!" is a straightforward yet captivating game where
+          the objective is to guess a secret number between 1 and 50. The game
+          provides hints to help you along the way. If your guess is too low, it
+          will let you know. Similarly, if your guess is too high, you'll
+          receive a prompt indicating that as well. This feedback loop continues
+          until you either guess the correct number or exhaust your allotted
+          tries.
+        </p>
+
+        <h2>How to Play</h2>
+        <ul>
+          <li>
+            Start the game and receive a prompt to guess a number between 1 and
+            50.
+          </li>
+          <li>Enter your guess and submit it.</li>
+          <li>
+            If your guess is incorrect, you'll be informed whether it was too
+            high or too low.
+          </li>
+          <li>Adjust your guesses based on the feedback provided.</li>
+          <li>You have a total of 50 tries to guess the correct number.</li>
+        </ul>
+
+        <h2>Features</h2>
+        <ul>
+          <li>
+            <strong>Simple Mechanics:</strong> Easy-to-understand rules make
+            "Guess The Number!" accessible to everyone.
+          </li>
+          <li>
+            <strong>Feedback System:</strong> Instant feedback on your guesses
+            helps you refine your strategy.
+          </li>
+          <li>
+            <strong>Highscore Tracking:</strong> Compete against yourself or
+            others by tracking your high scores. Aim to guess the number in as
+            few tries as possible!
+          </li>
+          <li>
+            <strong>Endless Fun:</strong> The random number generator ensures a
+            new challenge every time you play.
+          </li>
+        </ul>
+
+        <h2>Why You’ll Love It</h2>
+        <p>
+          "Guess The Number!" exemplifies our commitment to creating simple yet
+          thrilling games. It’s a game that anyone can pick up and enjoy!
+        </p>
+
+        <h2>Join the Fun</h2>
+        <p>
+          Ready to put your guessing skills to the test? Start playing "Guess
+          The Number!" today. Share your high scores, challenge your friends,
+          and see who can guess the number in the fewest tries. Remember, every
+          great gaming experience starts with a simple idea, and "Guess The
+          Number!" is here to prove that simplicity can be incredibly fun.
+        </p>
+        <hr />
+        <p id="endnote-after-hr">
+          We can't wait to see how quickly you can guess the number. Happy
+          guessing!
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div class="page-footer"></div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          fetch("../../../footer/footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+              const footerElement = document.querySelector(".page-footer");
+              // console.log(footerElement);
+              if (footerElement) {
+                footerElement.innerHTML = data;
+                // console.log(data);
+              } else {
+                console.error("FOOTER ELEM NOT FOUND");
+              }
+            });
+        });
+      </script>
+    </footer>
+  </body>
+  <script src="/blog/posts/posts-script.js"></script>
+  <script src="/navbar/navbar.js" defer></script>
+</html>
